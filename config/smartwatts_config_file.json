@@ -1,0 +1,33 @@
+
+{
+  "verbose": true,
+  "stream": true,
+  "input": {
+    "puller": {
+      "model": "HWPCReport",
+      "type": "mongodb",
+      "uri": "mongodb:://127.0.0.1",
+      "db": "db_sensor",
+      "collection": "report_0"
+    }
+  },
+  "output": {
+    "pusher_power": {
+      "type": "influxdb2",
+      "uri": "127.0.0.1",
+      "port": 8086,
+      "name": "influx2_output",
+      "db" : "power_consumption",
+      "bucket": "power_consumption",
+      "org": "umass",
+      "token": "Du3KI1dRawRuiL0WabfQXnz71V8r1DH-vivuX2rfGfi9Wo94jgZVw9VCm3H44-oEWqwGyQqoHg_jLRUXF9fNcQ=="
+    }
+  },
+  "cpu-frequency-base": 2100,
+  "cpu-frequency-min": 1200,
+  "cpu-frequency-max": 3000,
+  "cpu-error-threshold": 2.0,
+  "disable-dram-formula": true,
+  "sensor-report-sampling-interval": 1000
+}
+

@@ -1,0 +1,8 @@
+query = from(bucket: "power_consumption") 
+                |> range(start: {start_time}, stop: {stop_time})
+                |> filter(fn: (r) => r["_measurement"] == "power_consumption")
+                |> filter(fn: (r) => r["_field"] == "power")
+                |> filter(fn: (r) => r["sensor"] == "{sensor}")
+                |> filter(fn: (r) => r["target"] == "{container_name}")
+                |> integral(unit:1s)
+                |> yield()

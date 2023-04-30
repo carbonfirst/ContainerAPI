@@ -1,0 +1,20 @@
+SERVER:
+  HOST: "192.168.245.96"
+  PORT: "2345"
+INFLUX:
+  HOST: "192.168.245.96"
+  PORT: "8086"
+  TOKEN: "Du3KI1dRawRuiL0WabfQXnz71V8r1DH-vivuX2rfGfi9Wo94jgZVw9VCm3H44-oEWqwGyQqoHg_jLRUXF9fNcQ=="
+  ORG: "umass"
+  CARBON_INTENSITY_BUCKET: "carbon_intensity"
+  POWER_CONSUMPTION_BUCKET: "power_consumption"
+
+CARBON_DATA:
+  FILES_PATH: "/nfs/obelix/raid/co2signal.com/zones"
+  # FILES_PATH: "/nfs/obelix/users1/vbojanapally/repo/carbonfirst-powerapi/carbon_intensity_data"
+  # Change this to the path that contains carbon intensity data in csv format
+
+IDLE_POWER_DATA:
+  # File path and file name that contains idle power values
+  FILE_PATH: "/nfs/obelix/users1/vbojanapally/repo/carbonfirst-powerapi/idle_power"
+  FILE_NAME: "idle_power_sample.csv"

@@ -1,0 +1,1 @@
+15-59/30 * * * * /usr/bin/python3 /nfs/obelix/users1/vbojanapally/repo/carbonfirst-powerapi/carbon_intensity_data/write_carbon_data_to_influxdb.py --write_mode realtime --config_file_path /nfs/obelix/users1/vbojanapally/repo/carbonfirst-powerapi/config/config.yml

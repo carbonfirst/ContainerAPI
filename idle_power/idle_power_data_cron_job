@@ -1,0 +1,1 @@
+15-59/30 * * * * /usr/bin/python3 /nfs/obelix/users1/vbojanapally/repo/carbonfirst-powerapi/idle_power/write_idle_power_to_influxdb.py --config_file_path /nfs/obelix/users1/vbojanapally/repo/carbonfirst-powerapi/config/config.yml

@@ -1,0 +1,7 @@
+query = from(bucket: "carbon_intensity") 
+                |> range(start: {start_time}, stop: {stop_time})
+                |> filter(fn: (r) => r["_measurement"] == "carbon_intensity")
+                |> filter(fn: (r) => r["zoneName"] == "{zone}")
+                |> keep(columns: ["_time", "_field", "_value"])
+                |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
+                |> yield()
